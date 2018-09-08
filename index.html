@@ -6,18 +6,11 @@
 </head>
 <body>
 
-<button onclick="PlayMusic()">Play</button>
+<button onclick="playMusic()">Play</button>
 
-<p id="playbutton"> </p>
+<button onclick="pauseMusic()">Pause</button>
 
-<script>
-    function PlayMusic() {
-        let audio = new Audio('Vi_Music_Master_v16.mp3');
-        let promise = audio.play();
-        
-
-    }
-</script>
+<script src="js/MusicPlayer.js"> </script>
 
 </body>
 </html>
