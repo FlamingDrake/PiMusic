@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Pi Music Player</title>
+    <link rel="stylesheet" type="text/css" href = "css/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="css/button.css">
 </head>
 <body>
 
-<button onclick="playMusic()">Play</button>
+<div class="button">
+    <button onclick="playMusic()" class="playbtn">Play</button>
+    <button onclick="pauseMusic()" class="pausebtn">Pause</button>
+</div>
 
-<button onclick="pauseMusic()">Pause</button>
+
+<div class="dropdown">
+    <button class="dropbtn">Tillgängliga Kanaler</button>
+    <div class="dropdown-content">
+        <a onclick="p4()">P4</a>
+        <a onclick="guld()">Guldkanalen</a>
+        <a onclick="nrj()">NRJ</a>
+    </div>
+</div>
 
 <script src="js/MusicPlayer.js"> </script>
 
