@@ -34,6 +34,11 @@
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #ddd;}
 
+/* Change the color of the dropdown links on click */
+.dropdown-content a:active {
+    background-color: darkgrey;
+}
+
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 

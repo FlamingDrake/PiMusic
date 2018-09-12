@@ -1,0 +1,9 @@
+{
+  "name": "PiMusicLocal",
+  "version": "1.0.0",
+  "dependencies": {
+    "audio-loader": "^1.0.3",
+    "audio-play": "^2.2.0",
+    "express": "^4.16.3"
+  }
+}
