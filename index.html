@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Pi Music Player</title>
-    <link rel="stylesheet" type="text/css" href = "css/dropdown.css">
+    <link rel="stylesheet" type="text/css" href = "css/channelList.css">
     <link rel="stylesheet" type="text/css" href="css/button.css">
 </head>
-<body>
+<body style="background-color: #696969">
 
-<div class="button">
-    <button onclick="playMusic()" class="playbtn">Play</button>
+<div style="margin-left: 40%; margin-right: auto" class="button">
+    <form action="/spotify">
+        <input type="submit" value="Spotify", class="formButton">
+    </form>
+</div>
+
+<div style="margin-left: 45%; margin-right: auto" class="button" >
+    <button onclick="playMusic()" class="playbtn" >Play</button>
     <button onclick="pauseMusic()" class="pausebtn">Pause</button>
 </div>
 
 
-<div class="dropdown">
-    <button class="dropbtn" id = "currChannel">Tillgängliga Kanaler</button>
-    <div class="dropdown-content">
-        <a onclick="p4()">P4</a>
-        <a onclick="guld()">Guldkanalen</a>
-        <a onclick="nrj()">NRJ</a>
-    </div>
+<div style="margin-left: 40.5%; margin-right: auto" class="btn-group">
+    <button class="channelButton" onclick="p4()">P4</button>
+    <button class="channelButton" onclick="guld()">Guld Kanalen</button>
+    <button class="channelButton" onclick="nrj()">NRJ</button>
 </div>
+
 
 
 <script src="js/Connector.js"> </script>

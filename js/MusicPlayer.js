@@ -4,10 +4,10 @@ const express = require('express');
 const port = 8000;
 let radio;
 
+let vlcLocation = 'C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe';
 let currentStation = 'http://sverigesradio.se/topsy/direkt/207-hi-mp3';
-
+let options = {stdio: ['pipe', 'inherit', 'inherit']};
 let app = express();
-
 let alreadyPlaying = false;
 
 
@@ -30,7 +30,7 @@ play.post('/play', function (req, res, next) {
     req.accepts('application/json');
     if (!alreadyPlaying) {
         alreadyPlaying = true;
-        radio = spawn('C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe', [currentStation]);
+        radio = spawn(vlcLocation, [currentStation, options]);
     }
     res.end();
 });
@@ -48,12 +48,12 @@ pause.post('/pause', function (req, res, next) {
 let changeStation = express.Router();
 changeStation.post('/change', function (req, res) {
     currentStation = req.body.station;
-    if(alreadyPlaying){
-       radio.kill(9);
-       radio = spawn('C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe', [currentStation]);
+    if (alreadyPlaying) {
+        radio.kill(9);
+        radio = spawn(vlcLocation, [currentStation], options);
     } else {
         alreadyPlaying = true;
-        radio = spawn('C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe', [currentStation]);
+        radio = spawn(vlcLocation, [currentStation], options);
     }
     res.end();
 });

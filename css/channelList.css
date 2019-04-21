@@ -1,0 +1,16 @@
+.btn-group .channelButton{
+    background-color: #202d8e;
+    border: 1px solid #121939;
+    color: #cccccc;
+    padding: 15px 32px;
+    float: left;
+    font-size: 16px;
+}
+
+.btn-group .channelButton:not(:last-child){
+    border-right: none;
+}
+
+.btn-group .channelButton:hover{
+    background-color: #121939;
+}

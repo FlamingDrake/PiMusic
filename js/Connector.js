@@ -37,21 +37,21 @@ function pauseMusic() {
 }
 
 function guld() {
-    currChannel.innerText = 'Guld Kanalen';
+    //currChannel.innerText = 'Guld Kanalen';
     http.open('POST', url + '/change', true);
     http.setRequestHeader("Content-type", "application/json");
     http.send(JSON.stringify(guldData));
 }
 
 function p4() {
-    currChannel.innerText = 'P4';
+    //currChannel.innerText = 'P4';
     http.open('POST', url + '/change', true);
     http.setRequestHeader("Content-type", "application/json");
     http.send(JSON.stringify(p4Data));
 }
 
 function nrj() {
-    currChannel.innerText = 'NRJ';
+    //currChannel.innerText = 'NRJ';
     http.open('POST', url + '/change', true);
     http.setRequestHeader("Content-type", "application/json");
     http.send(JSON.stringify(nrjData));
